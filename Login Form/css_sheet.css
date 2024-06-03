@@ -1,0 +1,163 @@
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Quicksand', sans-serif;
+}
+body 
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  height: 100vh;
+  background-image: url(360_F_733640495_CzK3HMdjSStUetHvjydilz0IfAXB4n0W.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  
+}
+.container h1
+{
+    color:  white;
+    display: grid;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 3rem;
+    place-content: center;
+    margin-bottom: 100px;
+    
+}
+.container h2
+{
+  color: white;
+  font-size: 20px;
+  margin-left: 30px;
+  margin-top: 20px;
+  font-weight: 400;
+  
+}
+.container .create
+{
+  color: white;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  padding: 2rem;
+  font-size: 22px;
+  cursor: pointer;
+}
+.create:active{
+  color: cyan;
+}
+.container
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 25px;
+  border-radius: 4px;
+  border: 3px solid black;
+  backdrop-filter: blur(10px);
+  margin: 2rem;
+  border-radius: 5rem;
+  box-shadow: 0 0 10px orangered,0 0 40px orangered,0 0 60px orangered;
+}
+.container .f_pwd
+{
+  color:cyan;
+  text-decoration: none;
+  margin-left: 45px;
+  font-family:'Courier New', Courier, monospace;
+  font-weight: 600 ;
+  font-size: 20px;
+}
+.f_pwd:active
+{
+  transform: scale(1.1);
+  color: rgb(223, 66, 66);
+}
+
+.input-box
+{
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  justify-content: center;
+  padding: 10px;
+  color: white;
+  margin: 2rem;
+  gap: 2rem;
+  
+}
+.input-box label
+{
+  color: white;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 400;
+  font-size: 25px;
+}
+.input-box .user
+{
+  background-color: rgb(38, 18, 74);
+  border: none;
+  border-radius: 4px;
+  width: 200px;
+  height: 30px;
+  color:white;
+  font-size: 20px;
+  font-weight: 400;
+
+}
+.container .input-box .user:active,
+.container .input-box .pwd:active
+{
+  box-shadow: 0 0 5px cyan,0 0 20px cyan,0 0 50px cyan;
+  border: none;
+  animation: a .5s infinite;
+}
+@keyframes a {
+  0%{
+  transform: scale(1);
+  }
+  100%{
+  transform: scale(1.1);
+  }
+}
+.input-box .pwd
+{
+  background-color: rgb(38, 18, 74);
+  border: none;
+  border-radius: 4px;
+  width: 200px;
+  height: 30px;
+  color: white;
+  font-size: 20px;
+  font-weight: 400;
+}
+.button .btn
+{
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    background: aqua;
+    text-decoration: none;
+    margin-top: 3rem;
+    color: black;
+    border-radius: 4rem;
+    font-size: 1.6rem;
+    font-weight: 700;
+    transition: .5s ease;
+
+}
+.button .btn:hover{
+    box-shadow: 0 0 20px aqua,0 0 60px aqua;
+
+}
+.button .btn:active{
+  transform: scale(1.1);
+  color: orange;
+}
