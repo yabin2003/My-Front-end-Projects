@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Can u guess the number? -YJ</title>
+</head>
+<style>
+    body
+    {
+        background: #dff9fb;
+    }
+    .cnt{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    h5{
+        font-size: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        animation: bl 1s infinite;
+    }
+    h1{
+        font-weight: 400;
+    }
+    @keyframes bl 
+    {
+        50%
+        {
+            opacity: 0;
+        }
+    }
+    .game
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 5px 40px 40px 40px;
+        margin-top: 5px;
+        border-radius: 10px;
+        background:white ;
+        border: 1px solid black;
+    }
+    h2
+    {
+        font-size: 22px;
+        font-weight:300;
+        margin:2px 0 40px 0;
+    }
+    #num
+    {
+        width: 70px;
+        height: 70px;
+        font-size: 40px;
+        font-weight: 200;
+        text-align: center;
+        border-radius: 10px;
+        margin-bottom: 40px;
+    
+    }
+    #submit
+    {
+        width: 100px;
+        height: 50px;
+        border-radius: 10px;
+        background: #88e9a7;
+        font-size: 20px;
+        font-weight: 600;
+        cursor: pointer;
+        text-align: center;
+    }
+    #submit:hover
+    {
+        background:#06ab5e ;
+    }
+    #submit:active
+    {
+        transform: scale(1.1);
+    }
+    .res
+    {
+        display: flex;
+    }
+    .res h3{
+        font-size: 22px;
+        margin: 50px 0 5px 0;
+    }
+    .res h4{
+        font-size: 22px;
+        margin: 50px 7px 5px 100px;
+    }
+    span{
+        font-size: 25px;
+    }
+</style>
+<body>
+    <h5>Have Fun!</h5>
+    <div class="cnt">
+        <div class="game">
+            <h1>Can u guess the number?</h1>
+            <marquee behavior="alternate" direction="right"><h2>Enter a number from 1 to 10 😁</h2></marquee>
+            <input type="text" id="num" required maxlength="2" autofocus>
+            <button id="submit" onclick="check()">Submit</button>
+            <div class="res">
+                <h3>Guess : <span id="result">-</span> </h3><h4>No.of.guesses : <span id="no_guess">-</span></h4>
+            </div>
+            
+        </div>
+    </div>
+    
+</body>
+<script>
+    const no=Math.floor(Math.random()*10+1);
+    console.log(no);
+    var y=document.getElementById('num');
+    var g=document.getElementById('result');
+    var no_g=document.getElementById('no_guess');
+    let guess=0;
+    function check()
+    {
+        let x=y.value;
+        if(x==no)
+        {
+            g.textContent='Right';
+            guess++;
+            no_g.textContent=guess;
+            alert("Hurray!! You have guessed the number correct in "+guess+" guess...😁 It is "+no);
+        }
+        else{
+            //alert("Oopss...Incorrect, Try some larger number ");
+            guess++;
+            no_g.textContent=guess;
+            g.textContent="wrong";
+        }
+    }
+</script>
+</html>
