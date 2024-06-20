@@ -26,7 +26,7 @@ body
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 3rem;
     place-content: center;
-    margin-bottom: 100px;
+    margin-bottom: 70px;
     
 }
 .container h2
@@ -63,6 +63,7 @@ body
   margin: 2rem;
   border-radius: 5rem;
   box-shadow: 0 0 10px orangered,0 0 40px orangered,0 0 60px orangered;
+  transition: transform 1s ease-in;
 }
 .container .f_pwd
 {
@@ -89,6 +90,7 @@ body
   padding: 10px;
   color: white;
   margin: 2rem;
+  margin-bottom: 30px;
   gap: 2rem;
   
 }
@@ -145,12 +147,15 @@ body
     justify-content: center;
     background: aqua;
     text-decoration: none;
-    margin-top: 3rem;
+    margin: 50px auto 40px auto;
     color: black;
     border-radius: 4rem;
     font-size: 1.6rem;
-    font-weight: 700;
+    font-weight: 600;
     transition: .5s ease;
+    width: 200px;
+    height: 50px;
+    position: relative;
 
 }
 .button .btn:hover{
@@ -158,6 +163,186 @@ body
 
 }
 .button .btn:active{
+  transform: scale(1.1);
+  color: orange;
+}
+
+.sg
+{
+  
+  transform: rotateY(180deg);
+}
+/* Sign up */
+.sg_ctn h1
+{
+    color:  white;
+    display: grid;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 3rem;
+    place-content: center;
+    margin-bottom: 70px;
+    
+}
+.sg_ctn h2
+{
+  color: white;
+  font-size: 20px;
+  margin-left: 30px;
+  margin-top: 20px;
+  font-weight: 400;
+  
+}
+.sg_ctn .login
+{
+  color: white;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  padding: 2rem;
+  font-size: 22px;
+  cursor: pointer;
+}
+.login:active{
+  color: cyan;
+}
+.sg_ctn
+{
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 25px;
+  border-radius: 4px;
+  border: 3px solid black;
+  backdrop-filter: blur(10px);
+  margin: 2rem;
+  border-radius: 5rem;
+  box-shadow: 0 0 10px orangered,0 0 40px orangered,0 0 60px orangered;
+  transition: transform 1s ease-in;
+}
+
+
+.input-box2
+{
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  justify-content: center;
+  padding: 5px;
+  color: white;
+  margin: 5px auto 10px 20px;
+  
+}
+.input-box2 label
+{
+  color: white;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 400;
+  font-size: 25px;
+  margin-left: 10px;
+}
+.input-box2 .firstname
+{
+  background-color: rgb(38, 18, 74);
+  border: none;
+  border-radius: 4px;
+  width: 200px;
+  height: 30px;
+  color:white;
+  font-size: 20px;
+  font-weight: 400;
+  margin-left: 48px;
+}
+.input-box2 .lastname
+{
+  margin-left: 60px;
+  background-color: rgb(38, 18, 74);
+  border: none;
+  border-radius: 4px;
+  width: 200px;
+  height: 30px;
+  color:white;
+  font-size: 20px;
+  font-weight: 400;
+  
+}
+.input-box2 .email
+{
+  margin-left: 100px;
+  background-color: rgb(38, 18, 74);
+  border: none;
+  border-radius: 4px;
+  width: 200px;
+  height: 30px;
+  color:white;
+  font-size: 20px;
+  font-weight: 400;
+  
+}
+.input-box2 label
+{
+  margin-left: 20px;
+  color: white;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 400;
+  font-size: 25px;
+}
+.sg_ctn .input-box2 .firstname:active,
+.sg_ctn .input-box2 .lastname:active,
+.sg_ctn .input-box2 .email:active,
+.sg_ctn .input-box2 .pwd:active
+{
+  box-shadow: 0 0 5px cyan,0 0 20px cyan,0 0 50px cyan;
+  border: none;
+  animation: a .5s infinite;
+}
+@keyframes a {
+  0%{
+    transform: scale(1);
+  }
+  100%{
+    transform: scale(1.1);
+  }
+}
+.input-box2 .pwd
+{
+  background-color: rgb(38, 18, 74);
+  border: none;
+  border-radius: 4px;
+  width: 200px;
+  height: 30px;
+  color: white;
+  font-size: 20px;
+  font-weight: 400;
+  margin-left: 70px;
+}
+.btn2 .crt_btn
+{
+  display: flex;
+  padding: 7px;
+  align-items: center;
+  justify-content: center;
+  background: aqua;
+  text-decoration: none;
+  margin: 30px auto 40px auto;
+  color: black;
+  border-radius: 4rem;
+  font-size: 20px;
+  font-weight: 700;
+  transition: .5s ease;
+  width: 200px;
+  height: 50px;
+  cursor: pointer;
+  
+  
+}
+.btn2 .crt_btn:hover{
+  box-shadow: 0 0 20px aqua,0 0 60px aqua;
+
+  
+}
+.btn2 .crt_btn:active{
   transform: scale(1.1);
   color: orange;
 }
